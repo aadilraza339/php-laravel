@@ -34,7 +34,7 @@ class RouteServiceProvider extends ServiceProvider
                 ->group(base_path('routes/api.php'));
                 // Include your custom route file here
             require base_path('routes/product.php');
-
+            require base_path('routes/category.php');
             Route::middleware('web')
                 ->group(base_path('routes/web.php'));
         });

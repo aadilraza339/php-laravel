@@ -13,6 +13,7 @@
 <h1>Product Details</h1>
     <div style="max-width: 400px; margin: 0 auto;">
         <p><strong>Name:</strong> {{ $product->name }}</p>
+        <img src="{{ "https://backendapi.turing.com/images/products" . '/' . $product->image }}" alt="">
         <p><strong>Price:</strong> ${{ $product->price }}</p>
         <p><strong>Description:</strong> {{ $product->description }}</p>
     </div>

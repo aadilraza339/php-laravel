@@ -49,19 +49,21 @@
                 <th>Price</th>
                 <th>Description</th>
                 <th>Actions</th>
+                <th>Discounted Price</th>
             </tr>
         </thead>
         <tbody>
             @foreach($products as $product)
                 <tr>
-                    <td>{{ $product->id }}</td>
+                    <td>{{ $product->product_id }}</td>
                     <td>{{ $product->name }}</td>
                     <td>{{ $product->price }}</td>
                     <td>{{ $product->description }}</td>
+                    <td>{{ $product->discounted_price}}</td>
                     <td>
-                        <a href="{{ url("/products/{$product->id}") }}">Show</a>
-                        <a href="{{ url("/products/{$product->id}/edit") }}">Edit</a>
-                        <form action="{{ url("/products/{$product->id}") }}" method="post">
+                        <a href="{{ url("/products/{$product->product_id}") }}">Show</a>
+                        <a href="{{ url("/products/{$product->product_id}/edit") }}">Edit</a>
+                        <form action="{{ url("/products/{$product->product_id}") }}" method="post">
                             @csrf
                             @method('delete')
                             <button type="submit">Delete</button>
